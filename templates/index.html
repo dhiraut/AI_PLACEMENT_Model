@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Furniture Placement</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Furniture Placement</h1>
+        <form id="predictionForm">
+            <label>Room Width:</label>
+            <input type="number" id="room_width" required>
+
+            <label>Room Height:</label>
+            <input type="number" id="room_height" required>
+
+            <label>Furniture Width:</label>
+            <input type="number" id="furniture_width" required>
+
+            <label>Furniture Height:</label>
+            <input type="number" id="furniture_height" required>
+
+            <label>Spacing:</label>
+            <input type="number" id="spacing" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <h2>Predicted Coordinates:</h2>
+        <p id="result"></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
